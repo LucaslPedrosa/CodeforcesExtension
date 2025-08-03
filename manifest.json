@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Codeforces Problem Extractor",
+  "version": "1.0",
+  "description": "Filter problems from Codeforces contests based on difficulty and tags.",
+  "permissions": ["storage", "activeTab", "scripting"],
+  "host_permissions": ["https://codeforces.com/*"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "128": "icons/icon128.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}
