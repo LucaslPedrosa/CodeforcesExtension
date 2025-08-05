@@ -1,17 +1,89 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <title>Codeforces</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <h1>Codeforces</h1>
-  <input type="text" id="user" placeholder="Your username" />
-  <input type="text" id="friends" placeholder="Friends users (comma-separated)" />
-  <input type="text" id="minElo" placeholder="Minimum Elo (optional)" />
-  <button id="Search">Search</button>
-  <ul id="Problems"></ul>
-  <script src="popup.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <div class="header">
+      <img src="icons/codeforces.png" class="dark-img logo" />
+      <button
+        id="themeToggle"
+        class="theme-toggle"
+        title="Toggle dark/light mode"
+      >
+        🌙
+      </button>
+    </div>
+
+    <div id="userInfo">No user info available.</div>
+
+    <div style="margin: 10px 0"></div>
+
+    <input type="text" id="user" placeholder="Your username" />
+    <input
+      type="text"
+      id="friends"
+      placeholder="Friends users (comma-separated)"
+    />
+
+    <div
+      style="display: flex; align-items: center; justify-content: space-between"
+    >
+      <strong style="display: flex; align-items: center; height: 34px; margin-bottom: 10px;">Difficult: </strong>
+
+      <div
+        style="
+          display: flex;
+          justify-content: right;
+          align-items: center;
+          gap: 16px;
+        "
+      >
+        <input
+          type="text"
+          id="minElo"
+          placeholder="Minimum Elo (optional)"
+          class="Difficult"
+        />
+        <span style="display: flex; align-items: center; justify-content: center; height: 34px; font-size: 16px; font-weight: bold; margin-bottom: 10px;">—</span>
+        <input
+          type="text"
+          id="maxElo"
+          placeholder="Maximum Elo (optional)"
+          class="Difficult"
+        />
+      </div>
+    </div>
+
+    <input
+      type="text"
+      id="tags"
+      placeholder="Tags (comma-separated, optional)"
+    />
+
+    <select id="sortBy">
+      <option value="recent">Sort by Recent</option>
+      <option value="solved">Sort by Most Solved</option>
+    </select>
+    
+    <div id="updateStatus" class="status-message"></div>
+    <div>
+      <button id="Search">Filter Problems</button>
+      <button id="Update">Update Problems</button>
+    </div>
+
+    <ul id="Problems"></ul>
+
+    <div id="pagination" class="pagination" style="display: none">
+      <div class="pagination-container">
+        <button id="prevPage" class="pagination-btn">← Prev</button>
+        <div id="pageIndicator" class="page-indicator">1</div>
+        <button id="nextPage" class="pagination-btn">Next →</button>
+      </div>
+    </div>
+
+    <script type="module" src="popup.js"></script>
+  </body>
 </html>

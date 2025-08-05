@@ -1,0 +1,198 @@
+/* Form elements styles */
+input, select {
+  display: block;
+  margin-bottom: 10px;
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+#sortBy {
+  margin-bottom: 5px;
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: #0066cc;
+}
+
+.Difficult {
+  display: inline-flex;
+  width: 30%;
+}
+
+.status-message {
+  margin: 10px 0;
+  padding: 8px;
+  border-radius: 4px;
+  font-size: 14px;
+  text-align: center;
+  min-height: 20px;
+}
+
+.status-message:empty {
+  margin: 10;
+  min-height: 0;
+  padding: 0;
+}
+
+.filter-info {
+  font-style: italic;
+  color: #666;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 5px;
+  margin-bottom: 10px !important;
+}
+
+.problem-card {
+  display: block;
+  margin: 8px 0;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background-color: #fff;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.2s ease;
+}
+
+.problem-card:hover {
+  border-color: #0066cc;
+  box-shadow: 0 2px 8px rgba(0, 102, 204, 0.1);
+  text-decoration: none;
+}
+
+.problem-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.problem-name {
+  font-weight: 500;
+  color: #0066cc;
+  flex: 1;
+}
+
+.problem-rating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 13px;
+  color: #666;
+}
+
+.problem-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  color: #888;
+}
+
+.problem-tags {
+  flex: 1;
+  color: #888;
+}
+
+.problem-solved {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #666;
+}
+
+.elo-icon, .solved-icon {
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+}
+
+#Problems {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pagination {
+  margin: 20px 0;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.pagination-container {
+  display: grid;
+  grid-template-columns: 80px 40px 80px;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+}
+
+.pagination-btn {
+  background-color: #0066cc;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.pagination-btn:hover:not(:disabled) {
+  background-color: #0052a3;
+}
+
+.pagination-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.page-indicator {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #0066cc;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 16px;
+  margin: 0;
+}
+
+button{
+  padding: 10px;
+  background-color: #0066cc;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-bottom: 10px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0052a3;
+}
+
+.logo {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  vertical-align: middle;
+}

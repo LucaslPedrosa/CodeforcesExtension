@@ -1,0 +1,7 @@
+/* Main CSS file - imports all component styles */
+@import url('./css/base.css');
+@import url('./css/theme-toggle.css');
+@import url('./css/forms.css');
+@import url('./css/user-card.css');
+@import url('./css/problems-list.css');
+@import url('./css/dark-mode.css');

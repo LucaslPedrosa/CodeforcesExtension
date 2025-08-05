@@ -1,0 +1,92 @@
+/* Dark mode styles */
+body.dark-mode {
+  background-color: #1a1a1a;
+  color: #e0e0e0;
+}
+
+body.dark-mode .theme-toggle:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode input {
+  background-color: #2d2d2d;
+  color: #e0e0e0;
+  border: 1px solid #444;
+}
+
+body.dark-mode input::placeholder {
+  color: #888;
+}
+
+body.dark-mode button#Search {
+  background-color: #0066cc;
+  color: white;
+  border: none;
+}
+
+body.dark-mode button#Search:hover {
+  background-color: #0052a3;
+}
+
+body.dark-mode .user-card {
+  background-color: #2d2d2d;
+  border-color: #555;
+}
+
+body.dark-mode li {
+  background-color: #2d2d2d;
+}
+
+body.dark-mode li:hover {
+  background-color: #3d3d3d;
+}
+
+body.dark-mode a {
+  color: #66b3ff;
+}
+
+body.dark-mode a:hover {
+  color: #99ccff;
+}
+
+body.dark-mode .problem-card {
+  background-color: #2d2d2d;
+  border-color: #555;
+  color: #e0e0e0;
+}
+
+body.dark-mode .problem-card:hover {
+  border-color: #66b3ff;
+  box-shadow: 0 2px 8px rgba(102, 179, 255, 0.1);
+}
+
+body.dark-mode .problem-name {
+  color: #66b3ff;
+}
+
+body.dark-mode .problem-rating {
+  color: #aaa;
+}
+
+body.dark-mode .problem-tags {
+  color: #888;
+}
+
+body.dark-mode .problem-solved {
+  color: #aaa;
+}
+
+body.dark-mode select {
+  background-color: #2d2d2d;
+  color: #e0e0e0;
+  border: 1px solid #444;
+}
+
+body.dark-mode .pagination-btn:disabled {
+  background-color: #555;
+  color: #888;
+}
+
+body.dark-mode .dark-img {
+  filter: invert(1) hue-rotate(180deg) brightness(0.9) contrast(1.1);
+}
