@@ -97,25 +97,6 @@ A powerful Chrome extension that enhances your Codeforces experience with advanc
 - **Theme switching**: Use the 🌙 button to toggle dark/light mode
 - **Hide tags**: Check "Hide tags" for a cleaner problem view
 
-## 📚 Detailed Usage
-
-### 🔍 **Advanced Filtering**
-- **Difficulty Range**: Set min/max ELO to focus on your skill level
-- **Tag Combinations**: Use multiple tags with AND/OR logic for precise filtering
-- **Solve Count**: See how popular each problem is based on solve statistics
-- **Friend Comparison**: Discover problems your friends solved that you haven't attempted
-
-### 👥 **Friend Management**
-- Add multiple friends to compare your progress
-- The extension highlights unsolved problems from your friend group
-- Perfect for competitive programming study groups
-
-### 🎛️ **Customization Options**
-- **Theme Toggle**: Switch between light and dark modes instantly
-- **Tag Visibility**: Hide problem tags for a minimalist view
-- **Sorting Options**: Organize problems by recency or popularity
-- **Pagination**: Navigate through large result sets efficiently
-
 ## 🏗️ Technical Architecture
 
 ### **Frontend**
