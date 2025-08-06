@@ -49,6 +49,46 @@ body.dark-mode a:hover {
   color: #99ccff;
 }
 
+body.dark-mode .tag-item {
+  background-color: #2d4a66;
+  color: #66b3ff;
+  border-color: #3d5a77;
+}
+
+body.dark-mode .tag-remove {
+  color: #66b3ff;
+}
+
+body.dark-mode .tag-remove:hover {
+  background-color: #ff6666;
+  color: white;
+}
+
+body.dark-mode .checkbox-label {
+  color: #ccc;
+}
+
+body.dark-mode .checkbox-label:hover {
+  color: #66b3ff;
+}
+
+body.dark-mode .toggle-label {
+  color: #ccc;
+}
+
+body.dark-mode .toggle-slider {
+  background-color: #555;
+}
+
+body.dark-mode .toggle-switch input:checked + .toggle-slider {
+  background-color: #66b3ff;
+}
+
+body.dark-mode .toggle-switch input:checked ~ .toggle-label:last-child,
+body.dark-mode .toggle-switch input:not(:checked) ~ .toggle-label:first-child {
+  color: #66b3ff;
+}
+
 body.dark-mode .problem-card {
   background-color: #2d2d2d;
   border-color: #555;

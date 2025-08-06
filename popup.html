@@ -57,11 +57,48 @@
       </div>
     </div>
 
-    <input
-      type="text"
-      id="tags"
-      placeholder="Tags (comma-separated, optional)"
-    />
+    <select id="tagSelector">
+      <option value="">Select a tag to add...</option>
+      <option value="implementation">implementation</option>
+      <option value="math">math</option>
+      <option value="greedy">greedy</option>
+      <option value="dp">dp</option>
+      <option value="data structures">data structures</option>
+      <option value="brute force">brute force</option>
+      <option value="constructive algorithms">constructive algorithms</option>
+      <option value="graphs">graphs</option>
+      <option value="sortings">sortings</option>
+      <option value="binary search">binary search</option>
+      <option value="dfs and similar">dfs and similar</option>
+      <option value="trees">trees</option>
+      <option value="strings">strings</option>
+      <option value="number theory">number theory</option>
+      <option value="combinatorics">combinatorics</option>
+      <option value="geometry">geometry</option>
+      <option value="bitmasks">bitmasks</option>
+      <option value="two pointers">two pointers</option>
+      <option value="dsu">dsu</option>
+      <option value="shortest paths">shortest paths</option>
+      <option value="probabilities">probabilities</option>
+      <option value="divide and conquer">divide and conquer</option>
+      <option value="hashing">hashing</option>
+      <option value="games">games</option>
+      <option value="flows">flows</option>
+      <option value="interactive">interactive</option>
+      <option value="matrices">matrices</option>
+      <option value="string suffix structures">string suffix structures</option>
+    </select>
+
+    <div id="selectedTags" class="selected-tags"></div>
+
+    <div class="tag-filter-toggle">
+      <span class="toggle-label">Match all tags</span>
+      <label class="toggle-switch">
+        <input type="checkbox" id="tagFilterMode" checked />
+        <span class="toggle-slider"></span>
+      </label>
+      <span class="toggle-label">Match any tag</span>
+    </div>
 
     <select id="sortBy">
       <option value="recent">Sort by Recent</option>
@@ -72,6 +109,14 @@
     <div>
       <button id="Search">Filter Problems</button>
       <button id="Update">Update Problems</button>
+    </div>
+
+    <div class="hide-tags-container">
+      <label class="checkbox-label">
+        <input type="checkbox" id="hideTags" />
+        <span class="checkmark"></span>
+        Hide tags
+      </label>
     </div>
 
     <ul id="Problems"></ul>

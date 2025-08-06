@@ -1,6 +1,7 @@
 import { CodeforcesAPI } from "./api.js";
 import { Storage } from "./storage.js";
 import { ProblemCache } from "./problem-cache.js";
+import { TagManager } from "./tag-manager.js";
 
 export const ProblemFilter = {
   currentPage: 1,
@@ -19,12 +20,7 @@ export const ProblemFilter = {
       parseInt(document.getElementById("minElo").value.trim()) || 0;
     const maxElo =
       parseInt(document.getElementById("maxElo").value.trim()) || Infinity;
-    const tags = document
-      .getElementById("tags")
-      .value.trim()
-      .split(",")
-      .map((x) => x.trim())
-      .filter(Boolean);
+    const tags = TagManager.getSelectedTags();
     const sortBy = document.getElementById("sortBy").value || "rating";
 
     if (!user) {
@@ -100,14 +96,28 @@ export const ProblemFilter = {
       const meetsMaxElo = !prob.rating || prob.rating <= maxElo;
 
       // Tags filter
-      const meetsTagFilter =
-        tags.length === 0 ||
-        (prob.tags &&
+      const filterMode = TagManager.getFilterMode();
+      let meetsTagFilter;
+      
+      if (tags.length === 0) {
+        meetsTagFilter = true;
+      } else if (filterMode === 'OR') {
+        // OR logic: problem must have at least one of the selected tags
+        meetsTagFilter = prob.tags &&
           tags.some((tag) =>
             prob.tags.some((probTag) =>
               probTag.toLowerCase().includes(tag.toLowerCase())
             )
-          ));
+          );
+      } else {
+        // AND logic: problem must have all selected tags
+        meetsTagFilter = prob.tags &&
+          tags.every((tag) =>
+            prob.tags.some((probTag) =>
+              probTag.toLowerCase().includes(tag.toLowerCase())
+            )
+          );
+      }
 
       return isUnsolved && meetsMinElo && meetsMaxElo && meetsTagFilter;
     });

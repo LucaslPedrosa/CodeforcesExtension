@@ -5,6 +5,7 @@ import { ThemeManager } from './js/theme.js';
 import { ProblemCache } from './js/problem-cache.js';
 import { ProblemFilter } from './js/problem-filter.js';
 import { UserSearch } from './js/user-search.js';
+import { TagManager } from './js/tag-manager.js';
 
 // ===== MAIN INITIALIZATION =====
 window.addEventListener("load", () => {
@@ -29,10 +30,23 @@ window.addEventListener("load", () => {
   // Initialize theme
   ThemeManager.load();
 
+  // Initialize tag manager
+  TagManager.init();
+
   // Event listeners
   document.getElementById("themeToggle").addEventListener("click", () => ThemeManager.toggle());
   document.getElementById("Update").addEventListener("click", () => ProblemCache.updateProblems());
   document.getElementById("Search").addEventListener("click", () => ProblemFilter.filterProblems());
+  
+  // Hide tags checkbox
+  document.getElementById("hideTags").addEventListener("change", (e) => {
+    const problemsList = document.getElementById("Problems");
+    if (e.target.checked) {
+      problemsList.classList.add("hide-tags");
+    } else {
+      problemsList.classList.remove("hide-tags");
+    }
+  });
   
   // Pagination event listeners
   document.getElementById("prevPage").addEventListener("click", () => ProblemFilter.changePage('prev'));
